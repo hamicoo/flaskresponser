@@ -12,7 +12,7 @@ def calculator(num):
     if str(num).isnumeric():
         return (True,int(num)*2)
     else:
-        return (False,"please give me a number")
+        return (False,"please give me a number!")
     
 
 
