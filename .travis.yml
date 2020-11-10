@@ -1,9 +1,12 @@
-os:
-  - linux
 
-dist: xenial
-
+sudo: false
 language: python
+python:
+  - 3.8
+install: pip install -r requirements.txt
+
 
 script:
+  - python app.py &
+  - sleep 5
   - python -m pytest -v test.py
