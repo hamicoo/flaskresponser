@@ -2,6 +2,8 @@
 
 from flask import Flask
 from flask import jsonify
+
+
 app = Flask(__name__)
 
 
@@ -22,10 +24,7 @@ def hello(number):
     return jsonify({ "message":"Err" , "calculation_result" : str(res[1]) })
     
         
+@app.route('/test')
+def test():
+    return "Works!"
     
-    
-    
-    
-
-if __name__ == '__main__':
-    app.run(debug=True)
